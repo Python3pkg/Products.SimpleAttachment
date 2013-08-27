@@ -5,7 +5,7 @@
  <property name="title" i18n:translate="">Attached image</property>
  <property name="description"
       i18n:translate="">A image attachment</property>
- <property name="content_icon">image_icon.gif</property>
+ <property name="icon_expr">string:${portal_url}/image_icon.png</property>
  <property name="content_meta_type">ImageAttachment</property>
  <property name="product">SimpleAttachment</property>
  <property name="factory">addImageAttachment</property>
