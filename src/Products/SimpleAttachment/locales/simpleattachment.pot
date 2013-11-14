@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-11 09:25+0000\n"
+"POT-Creation-Date: 2013-11-14 15:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: simpleattachment\n"
+
+#: ./extenders.py:37
+msgid ""
+msgstr ""
 
 #: ./profiles/default/types/FileAttachment.xml
 msgid "A file attachment"
@@ -33,22 +37,22 @@ msgstr ""
 msgid "Attached image"
 msgstr ""
 
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:143
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:144
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:148
 msgid "Change titles"
 msgstr ""
 
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:155
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:156
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:160
 msgid "Delete selected"
 msgstr ""
 
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:149
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:150
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:154
 msgid "Move first"
 msgstr ""
 
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:202
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:203
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:207
 msgid "Upload"
 msgstr ""
@@ -59,17 +63,17 @@ msgid "help_widget_imagesmanager_upload"
 msgstr ""
 
 #. Default: "Select an attachment to add and click 'Upload'"
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:189
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:190
 msgid "help_widgetattachmentsmanager_attachment"
 msgstr ""
 
 #. Default: "Enter a title for the attachment"
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:174
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:175
 msgid "help_widgetattachmentsmanager_title"
 msgstr ""
 
 #. Default: "Once an attachment is uploaded, you can refer to it in your body text by its filename."
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:209
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:210
 msgid "help_widgetattachmentsmanager_upload"
 msgstr ""
 
@@ -93,9 +97,19 @@ msgstr ""
 msgid "label_click_to_view_full_image"
 msgstr ""
 
+#. Default: "File"
+#: ./extenders.py:36
+msgid "label_file"
+msgstr ""
+
 #. Default: "File type"
 #: ./skins/simpleattachment/fileattachment_view.pt:61
 msgid "label_file_type"
+msgstr ""
+
+#. Default: "Image"
+#: ./extenders.py:70
+msgid "label_image"
 msgstr ""
 
 #. Default: "Go to the document this image is attached to."
@@ -109,7 +123,7 @@ msgid "label_size"
 msgstr ""
 
 #. Default: "Add attachment to document"
-#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:171
+#: ./skins/attachment_widgets/widget_attachmentsmanager.pt:172
 msgid "label_widgetattachmentsmanager_title"
 msgstr ""
 
@@ -126,6 +140,11 @@ msgstr ""
 #. Default: "Images"
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:20
 msgid "legend_images"
+msgstr ""
+
+#. Default: "Blob Migration"
+#: ./migration/migration.pt:10
+msgid "migration_title"
 msgstr ""
 
 #. Default: "(No file has been uploaded yet)"
