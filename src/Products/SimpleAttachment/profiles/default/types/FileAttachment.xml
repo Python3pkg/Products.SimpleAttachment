@@ -15,7 +15,10 @@
  <property name="filter_content_types">False</property>
  <property name="allowed_content_types"/>
  <property name="allow_discussion">False</property>
- <alias from="(Default)" to="(dynamic view)"/>
+ <property name="default_view">fileattachment_view</property>
+ <property name="view_methods"/>
+ <property name="default_view_fallback">True</property>
+<alias from="(Default)" to="(dynamic view)"/>
  <alias from="edit" to="atct_edit"/>
  <alias from="sharing" to="@@sharing"/>
  <alias from="view" to="(selected layout)"/>
