@@ -4,6 +4,10 @@ Changelog
 4.4 (unreleased)
 ----------------
 
+- Updated Plone version into buildout extends configurarion
+  [macagua]
+- Added spanish translations
+  [macagua]
 - fix import step dependencies
   [kiorky]
 - fix icon_expr for portal types
