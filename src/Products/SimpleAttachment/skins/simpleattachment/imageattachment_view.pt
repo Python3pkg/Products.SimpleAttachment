@@ -7,12 +7,21 @@
 
 <div metal:fill-slot="main">
     <tal:main-macro metal:define-macro="main"
-                    tal:define="size here/size">
+           tal:define="size python:here.getObjSize(here);
+                       content_type here/content_type;
+                       template_id template/getId;
+                       here_url context/@@plone_context_state/object_url;
+                       portal_url context/portal_url;
+                       parent_url python:here.navigationParent(here, template_id)">
+
+        <div tal:replace="structure provider:plone.documentactions">
+            Document actions (print, sendto etc)
+        </div>
 
         <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">
             Title or id
         </h1>
-    
+
         <a href=""
            class="link-parent"
            tal:define="parent_url python:here.navigationParent(here, template_id)"
@@ -21,10 +30,6 @@
            i18n:translate="label_link_to_origin">
         Go to the document this image is attached to.
         </a>
-    
-        <div metal:use-macro="here/document_byline/macros/byline">
-            Get the byline - contains details about author and modification date.
-        </div>
 
         <p class="documentDescription"
            tal:content="here/Description"
@@ -32,40 +37,51 @@
             Description
         </p>
 
-        <a href=""
-           class="discreet"
-           tal:attributes="href string:${here/absolute_url}/image_view_fullscreen">
+        <p>
+          <a href=""
+             class="discreet"
+             tal:attributes="href string:${here/absolute_url}/image_view_fullscreen">
             <tal:block condition="size" replace="structure python: here.tag(scale='preview')" />
             <br />
-            <img src="" alt="" tal:replace="structure here/search_icon.gif" />
+            <img src="" alt="" tal:replace="structure context/search_icon.png" />
             <span i18n:translate="label_click_to_view_full_image">
-            Click to view full-size image&hellip;
+              Click to view full-size image&hellip;
             </span>
-        </a>
+          </a>
+        </p>
 
-        <span class="discreet">
-        &mdash;
-            <span i18n:translate="label_size">Size</span>:
+        <small class="discreet">
+          <span i18n:translate="label_size" i18n:domain="plone">
+            Size
+          </span>
 
-            <span tal:define="size python:here.getObjSize(here)"
-                  tal:content="size">
-                File size
-            </span>
+          <span tal:condition="size"
+                tal:content="size">
+            257 KB
+          </span>
 
-            <span tal:condition="python:test(size, 0, 1)"
-                  i18n:translate="no_image_uploaded">
-                (No image has been uploaded yet)
-            </span>
-        </span>
+          <span tal:condition="python:test(size,0,1)" i18n:translate="no_image_uploaded">
+            (No image has been uploaded yet)
+          </span>
 
-        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+          -
+
+          <span i18n:translate="label_file_type">
+            File type
+          </span>
+
+          <span tal:content="content_type">
+            Content type
+          </span>
+        </small>
+
+        <div tal:replace="structure provider:plone.belowcontentbody">
             show related items if they exist
         </div>
-        
+
     </tal:main-macro>
 </div>
 
 </body>
 
 </html>
-
