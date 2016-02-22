@@ -33,6 +33,7 @@ setup(
     extras_require={'test': [
         'zope.testing',
         'collective.testcaselayer',
+        'Products.PloneTestCase',
         'Products.RichDocument',
     ]},
 )
