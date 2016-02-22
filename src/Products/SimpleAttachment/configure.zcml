@@ -29,4 +29,11 @@
      description="Simple attachment content types and widget"
      provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <gs:upgradeDepends
+      title="Update typeinfo"
+      source="4400"
+      destination="4401"
+      profile="Products.SimpleAttachment:default"
+      import_steps="typeinfo" />
+
 </configure>
