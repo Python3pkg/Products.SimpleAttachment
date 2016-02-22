@@ -21,8 +21,8 @@ def setupAttachments(context):
             linkable.append('ImageAttachment')
         if 'ImageAttachment' not in mediaobject:
             mediaobject.append('ImageAttachment')
-        # kupu_library_tool has an idiotic interface, basically written purely to
-        # work with its configuration page. :-(
+        # kupu_library_tool has an idiotic interface, basically written purely
+        # to work with its configuration page. :-(
         kupuTool.updateResourceTypes(({'resource_type': 'linkable',
                                        'old_type': 'linkable',
                                        'portal_types': linkable},

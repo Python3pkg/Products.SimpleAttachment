@@ -41,13 +41,14 @@ class FileAttachment(ATFile):
         value = str(field.get(self))
         filename = field.getFilename(self)
         try:
-            return str(transforms.convertTo(mimetype, value,
-                                            mimetype=source, filename=filename))
+            return str(transforms.convertTo(
+                mimetype, value, mimetype=source, filename=filename))
         except (ConflictError, KeyboardInterrupt):
             raise
         except:
-            getLogger(__name__).exception('exception while trying to convert '
-                                          'blob contents to "text/plain" for %r', self)
+            getLogger(__name__).exception(
+                'exception while trying to convert '
+                'blob contents to "text/plain" for %r', self)
 
     security.declareProtected('View', 'index_html')
 

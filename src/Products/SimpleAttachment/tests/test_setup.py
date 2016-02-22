@@ -30,7 +30,8 @@ class TestInstallation(IntegrationTestCase):
         self.failUnless('ImageAttachment' in types_not_searched)
 
     def testTypesUseViewActionInListings(self):
-        typesUseViewActionInListings = self.properties.site_properties.getProperty(
+        site_props = self.properties.site_properties
+        typesUseViewActionInListings = site_props.getProperty(
             'typesUseViewActionInListings')
         self.failUnless('FileAttachment' in typesUseViewActionInListings)
         self.failUnless('ImageAttachment' in typesUseViewActionInListings)
