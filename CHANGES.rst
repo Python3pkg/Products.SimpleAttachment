@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.5 (unreleased)
+5.0 (unreleased)
 ----------------
 
 - Improved compatibility and view on Plone 4.3.  Only 4.3 is really
