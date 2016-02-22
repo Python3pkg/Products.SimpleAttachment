@@ -6,8 +6,8 @@ setup(
     name='Products.SimpleAttachment',
     version=version,
     description="Simple Attachments for Plone",
-    long_description=(open("README.md").read() + '\n' +
-                      open('CHANGES.txt').read()),
+    long_description=(open("README.rst").read() + '\n' +
+                      open('CHANGES.rst').read()),
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.3",
