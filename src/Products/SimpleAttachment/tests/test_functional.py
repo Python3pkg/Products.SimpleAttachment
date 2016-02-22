@@ -25,14 +25,14 @@ OPTIONFLAGS = (
 def list_doctests():
     home = package_home(GLOBALS)
     return [filename for filename in
-          glob.glob(os.path.sep.join([home, '*.txt']))]
+            glob.glob(os.path.sep.join([home, '*.txt']))]
 
 
 def test_suite():
     filenames = list_doctests()
     suites = [Suite(os.path.basename(filename),
-               optionflags=OPTIONFLAGS,
-               package='Products.SimpleAttachment.tests',
-               test_class=FunctionalTestCase)
+                    optionflags=OPTIONFLAGS,
+                    package='Products.SimpleAttachment.tests',
+                    test_class=FunctionalTestCase)
               for filename in filenames]
     return unittest.TestSuite(suites)

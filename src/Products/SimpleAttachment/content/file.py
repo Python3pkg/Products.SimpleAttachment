@@ -29,6 +29,7 @@ class FileAttachment(ATFile):
     security = ClassSecurityInfo()
 
     security.declarePrivate('getIndexValue')
+
     def getIndexValue(self, mimetype='text/plain'):
         """Copy/paste from plone.app.blob
         """
@@ -41,14 +42,15 @@ class FileAttachment(ATFile):
         filename = field.getFilename(self)
         try:
             return str(transforms.convertTo(mimetype, value,
-                mimetype=source, filename=filename))
+                                            mimetype=source, filename=filename))
         except (ConflictError, KeyboardInterrupt):
             raise
         except:
             getLogger(__name__).exception('exception while trying to convert '
-               'blob contents to "text/plain" for %r', self)
+                                          'blob contents to "text/plain" for %r', self)
 
     security.declareProtected('View', 'index_html')
+
     def index_html(self, REQUEST, RESPONSE):
         """ download the file inline or as an attachment """
         field = self.getPrimaryField()

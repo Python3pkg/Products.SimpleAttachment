@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 
+
 def setupAttachments(context):
     if context.readDataFile('simpleattachment_various.txt') is None:
         return
@@ -12,7 +13,8 @@ def setupAttachments(context):
 
     if kupuTool:
         linkable = list(kupuTool.getPortalTypesForResourceType('linkable'))
-        mediaobject = list(kupuTool.getPortalTypesForResourceType('mediaobject'))
+        mediaobject = list(
+            kupuTool.getPortalTypesForResourceType('mediaobject'))
         if 'FileAttachment' not in linkable:
             linkable.append('FileAttachment')
         if 'ImageAttachment' not in linkable:
@@ -21,12 +23,12 @@ def setupAttachments(context):
             mediaobject.append('ImageAttachment')
         # kupu_library_tool has an idiotic interface, basically written purely to
         # work with its configuration page. :-(
-        kupuTool.updateResourceTypes(({'resource_type' : 'linkable',
-                                       'old_type'      : 'linkable',
-                                       'portal_types'  :  linkable},
-                                      {'resource_type' : 'mediaobject',
-                                       'old_type'      : 'mediaobject',
-                                       'portal_types'  :  mediaobject},))
+        kupuTool.updateResourceTypes(({'resource_type': 'linkable',
+                                       'old_type': 'linkable',
+                                       'portal_types':  linkable},
+                                      {'resource_type': 'mediaobject',
+                                       'old_type': 'mediaobject',
+                                       'portal_types':  mediaobject},))
 
     if tinyTool:
         linkable = tinyTool.linkable.split('\n')
@@ -37,7 +39,6 @@ def setupAttachments(context):
         imageobjects = tinyTool.imageobjects.split('\n')
         imageobjects.append('ImageAttachment')
         tinyTool.imageobjects = '\n'.join(set(imageobjects))
-
 
 
 def registerImagesFormControllerActions(context, contentType=None, template='base_edit'):

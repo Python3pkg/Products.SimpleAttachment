@@ -21,14 +21,15 @@ class AttachmentsManagerWidget(TypesWidget):
 
     # Use the base class properties, and add two of our own
     _properties = TypesWidget._properties.copy()
-    _properties.update({'macro'     : 'widget_attachmentsmanager',
-                        'expanded'  : False,
+    _properties.update({'macro': 'widget_attachmentsmanager',
+                        'expanded': False,
                         },)
 
 
 # Register the widget with Archetypes
 registerWidget(AttachmentsManagerWidget,
-               title = 'Attachments manager widget',
-               description= ('Renders controls for uploading attachments to documents',),
-               used_for = ('Products.Archetypes.Field.BooleanField',)
+               title='Attachments manager widget',
+               description=(
+                   'Renders controls for uploading attachments to documents',),
+               used_for=('Products.Archetypes.Field.BooleanField',)
                )

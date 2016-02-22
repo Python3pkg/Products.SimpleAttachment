@@ -23,8 +23,8 @@ def initialize(context):
 
     utils.ContentInit(
         PROJECTNAME + ' Content',
-        content_types      = content_types,
-        permission         = DEFAULT_ADD_CONTENT_PERMISSION,
-        extra_constructors = constructors,
-        fti                = ftis,
-        ).initialize(context)
+        content_types=content_types,
+        permission=DEFAULT_ADD_CONTENT_PERMISSION,
+        extra_constructors=constructors,
+        fti=ftis,
+    ).initialize(context)

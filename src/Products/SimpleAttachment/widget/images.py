@@ -21,14 +21,15 @@ class ImagesManagerWidget(TypesWidget):
 
     # Use the base class properties, and add two of our own
     _properties = TypesWidget._properties.copy()
-    _properties.update({'macro'     : 'widget_imagesmanager',
-                        'expanded'  : False,
+    _properties.update({'macro': 'widget_imagesmanager',
+                        'expanded': False,
                         },)
 
 
 # Register the widget with Archetypes
 registerWidget(ImagesManagerWidget,
-               title = 'Images manager widget',
-               description= ('Renders controls for uploading images in documents',),
-               used_for = ('Products.Archetypes.Field.BooleanField',)
+               title='Images manager widget',
+               description=(
+                   'Renders controls for uploading images in documents',),
+               used_for=('Products.Archetypes.Field.BooleanField',)
                )

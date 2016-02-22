@@ -56,7 +56,6 @@ class ImageAttachmentMigrator(BaseInlineMigrator):
         self.obj.reindexObject()
 
 
-
 def migrateSimpleAttachment(portal, migrator):
     walker = CustomQueryWalker(portal, migrator, full_transaction=True)
     savepoint(optimistic=True)
