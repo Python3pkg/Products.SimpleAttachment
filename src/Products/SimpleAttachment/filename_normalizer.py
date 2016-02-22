@@ -6,4 +6,5 @@ from zope.publisher.browser import BrowserView
 class FilenameNormalizer(BrowserView):
 
     def __call__(self, filename):
-        return IUserPreferredFileNameNormalizer(self.request).normalize(safe_unicode(filename))
+        return IUserPreferredFileNameNormalizer(
+            self.request).normalize(safe_unicode(filename))

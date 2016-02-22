@@ -25,10 +25,10 @@ def setupAttachments(context):
         # work with its configuration page. :-(
         kupuTool.updateResourceTypes(({'resource_type': 'linkable',
                                        'old_type': 'linkable',
-                                       'portal_types':  linkable},
+                                       'portal_types': linkable},
                                       {'resource_type': 'mediaobject',
                                        'old_type': 'mediaobject',
-                                       'portal_types':  mediaobject},))
+                                       'portal_types': mediaobject},))
 
     if tinyTool:
         linkable = tinyTool.linkable.split('\n')
@@ -41,7 +41,8 @@ def setupAttachments(context):
         tinyTool.imageobjects = '\n'.join(set(imageobjects))
 
 
-def registerImagesFormControllerActions(context, contentType=None, template='base_edit'):
+def registerImagesFormControllerActions(
+        context, contentType=None, template='base_edit'):
     """Register the form controller actions necessary for the widget to work.
     This should probably be called from the Install.py script. The parameter
     'context' should be the portal root or another place from which the form
@@ -79,7 +80,8 @@ def registerImagesFormControllerActions(context, contentType=None, template='bas
                       'string:widget_imagesmanager_delete')
 
 
-def registerAttachmentsFormControllerActions(context, contentType=None, template='base_edit'):
+def registerAttachmentsFormControllerActions(
+        context, contentType=None, template='base_edit'):
     """Register the form controller actions necessary for the widget to work.
     This should probably be called from the Install.py script. The parameter
     'context' should be the portal root or another place from which the form
