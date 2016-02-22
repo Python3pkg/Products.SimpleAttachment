@@ -8,9 +8,7 @@ from Products.Five.browser import BrowserView
 from Products.contentmigration.migrator import BaseInlineMigrator
 from Products.contentmigration.walker import CustomQueryWalker
 from StringIO import StringIO
-from plone.app.blob.migrations import migrate
 from transaction import savepoint
-from zope.component._api import getMultiAdapter
 
 
 class FileAttachmentMigrator(BaseInlineMigrator):
