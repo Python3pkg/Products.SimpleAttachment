@@ -6,7 +6,7 @@
 <body>
 
 <div metal:fill-slot="main">
-    <tal:main-macro metal:define-macro="main" 
+    <tal:main-macro metal:define-macro="main"
            tal:define="size python:here.getObjSize(here);
                        content_type here/content_type;
                        template_id template/getId;
@@ -20,7 +20,7 @@
         <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">
             Title or id
         </h1>
-        
+
         <a href=""
            class="link-parent"
            tal:define="parent_url python:here.navigationParent(here, template_id)"
@@ -28,13 +28,13 @@
            tal:attributes="href parent_url">
         Go to the document this file is attached to.
         </a>
-    
+
         <p class="documentDescription"
            tal:content="here/Description"
            tal:condition="here/Description">
             Description
         </p>
-    
+
         <p>
             <a href=""
                tal:attributes="href string:$here_url/download">
@@ -44,37 +44,37 @@
                 </tal:block>
             </a>
         </p>
-    
+
         <small class="discreet">
             <span i18n:translate="label_size" i18n:domain="plone">
             Size
             </span>
-            
+
             <span tal:condition="size"
                 tal:content="size">
             257 KB
             </span>
-    
+
             <span tal:condition="python:test(size,0,1)" i18n:translate="no_file_uploaded">
               (No file has been uploaded yet)
             </span>
-    
+
             -
-            
+
             <span i18n:translate="label_file_type">
             File type
             </span>
-    
+
             <span tal:content="content_type">
             Content type
             </span>
         </small>
-    
+
         <div class="row"
              tal:condition="python:test(content_type.find('text')>-1, 1,0)">
-    
+
                 <h2 i18n:translate="heading_file_contents" i18n:domain="plone">File contents</h2>
-    
+
                 <pre tal:content="here/get_data|here/data|nothing">
                 </pre>
 
@@ -83,7 +83,7 @@
         <div tal:replace="structure provider:plone.belowcontentbody">
             show related items if they exist
         </div>
-    
+
     </tal:main-macro>
 </div>
 
