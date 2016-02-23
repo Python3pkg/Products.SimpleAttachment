@@ -9,7 +9,7 @@ and image attachment types that can serve this need.
 SimpleAttachment is released under the GNU General Public Licence, version 2.
 Please see http://gnu.org for more details.
 
-Acknowlegements
-===============
+Acknowledgements
+================
 
-These types were taken from the RichDocument product.
+These types were taken from the RichDocument product, which now uses our types.
