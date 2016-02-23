@@ -30,6 +30,10 @@ msgstr ""
 msgid "Attached image"
 msgstr ""
 
+#: ./configure.zcml:30
+msgid "Attachment support"
+msgstr ""
+
 #: ./skins/attachment_widgets/widget_attachmentsmanager.pt:144
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:148
 msgid "Change titles"
@@ -43,6 +47,10 @@ msgstr ""
 #: ./skins/attachment_widgets/widget_attachmentsmanager.pt:150
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:154
 msgid "Move first"
+msgstr ""
+
+#: ./configure.zcml:30
+msgid "Simple attachment content types and widget"
 msgstr ""
 
 #: ./skins/attachment_widgets/widget_attachmentsmanager.pt:203
@@ -81,12 +89,12 @@ msgid "help_widgetimagesmanager_title"
 msgstr ""
 
 #. Default: "Click here to get the file"
-#: ./skins/simpleattachment/fileattachment_view.pt:39
+#: ./skins/simpleattachment/fileattachment_view.pt:43
 msgid "label_click_to_get_file"
 msgstr ""
 
 #. Default: "Click to view full-size image…"
-#: ./skins/simpleattachment/imageattachment_view.pt:41
+#: ./skins/simpleattachment/imageattachment_view.pt:45
 msgid "label_click_to_view_full_image"
 msgstr ""
 
@@ -96,23 +104,24 @@ msgid "label_file"
 msgstr ""
 
 #. Default: "File type"
-#: ./skins/simpleattachment/fileattachment_view.pt:61
+#: ./skins/simpleattachment/fileattachment_view.pt:65
+#: ./skins/simpleattachment/imageattachment_view.pt:67
 msgid "label_file_type"
 msgstr ""
 
 #. Default: "Image"
-#: ./extenders.py:70
+#: ./extenders.py:72
 msgid "label_image"
 msgstr ""
 
-#. Default: "Go to the document this image is attached to."
-#: ./skins/simpleattachment/imageattachment_view.pt:16
-msgid "label_link_to_image_origin"
+#. Default: "Go to the document this file is attached to."
+#: ./skins/simpleattachment/fileattachment_view.pt:24
+msgid "label_link_to_file_origin"
 msgstr ""
 
-#. Default: "Size"
-#: ./skins/simpleattachment/imageattachment_view.pt:48
-msgid "label_size"
+#. Default: "Go to the document this image is attached to."
+#: ./skins/simpleattachment/imageattachment_view.pt:23
+msgid "label_link_to_image_origin"
 msgstr ""
 
 #. Default: "Add attachment to document"
@@ -141,12 +150,12 @@ msgid "migration_title"
 msgstr ""
 
 #. Default: "(No file has been uploaded yet)"
-#: ./skins/simpleattachment/fileattachment_view.pt:55
+#: ./skins/simpleattachment/fileattachment_view.pt:59
 msgid "no_file_uploaded"
 msgstr ""
 
 #. Default: "(No image has been uploaded yet)"
-#: ./skins/simpleattachment/imageattachment_view.pt:55
+#: ./skins/simpleattachment/imageattachment_view.pt:61
 msgid "no_image_uploaded"
 msgstr ""
 
@@ -159,4 +168,3 @@ msgstr ""
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:98
 msgid "title_widgetimagesmanager"
 msgstr ""
-
