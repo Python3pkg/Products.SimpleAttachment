@@ -25,7 +25,8 @@
            class="link-parent"
            tal:define="parent_url python:here.navigationParent(here, template_id)"
            tal:condition="parent_url"
-           tal:attributes="href parent_url">
+           tal:attributes="href parent_url"
+           i18n:translate="label_link_to_file_origin">
         Go to the document this file is attached to.
         </a>
 
