@@ -127,12 +127,12 @@ msgstr "Ga naar het document waar deze afbeelding een bijlage van is."
 #. Default: "Add attachment to document"
 #: ./skins/attachment_widgets/widget_attachmentsmanager.pt:172
 msgid "label_widgetattachmentsmanager_title"
-msgstr "Voeg bijlage to aan document"
+msgstr "Voeg bijlage toe aan document"
 
 #. Default: "Add image to document"
 #: ./skins/attachment_widgets/widget_imagesmanager.pt:176
 msgid "label_widgetimagesmanager_title"
-msgstr "Voeg afbeelding to aan document"
+msgstr "Voeg afbeelding toe aan document"
 
 #. Default: "Attachments"
 #: ./skins/attachment_widgets/widget_attachmentsmanager.pt:20
