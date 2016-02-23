@@ -117,7 +117,7 @@ msgstr "Imagen"
 
 #. Default: "Go to the document this image is attached to."
 #: ./skins/simpleattachment/imageattachment_view.pt:16
-msgid "label_link_to_origin"
+msgid "label_link_to_image_origin"
 msgstr "Ir al documento donde se adjunta esta imagen."
 
 #. Default: "Size"
