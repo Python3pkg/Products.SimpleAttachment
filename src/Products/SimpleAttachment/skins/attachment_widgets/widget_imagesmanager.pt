@@ -86,6 +86,7 @@
       <tal:after_field define="visState python:widget.isVisible(here, mode);
                                visCondition python:field.widget.testCondition(here, portal, template);
                                catalog context/@@plone_tools/catalog;
+                               helper context/@@attachment_helper;
                                path python: '/'.join(context.getPhysicalPath());
                                images python:catalog(portal_type = ['ImageAttachment'], path=path, sort_on='getObjPositionInParent');
                                images python: [i.getObject() for i in images];"
@@ -139,6 +140,10 @@
                       title image/Title;"
                       tal:content="image/getId">Id</a> -
                       <span tal:replace="image/getObjSize"/>)
+                      <a tal:attributes="href string:${image/absolute_url}/@@croppingeditor"
+                         tal:condition="python:helper.is_cropping_supported(image)"
+                         i18n:domain="plone.app.imagecropping"
+                         i18n:translate="">Image Cropping Editor</a>
                     </div>
                   </td>
                 </tr>

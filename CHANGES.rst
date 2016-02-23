@@ -4,6 +4,9 @@ Changelog
 5.0 (unreleased)
 ----------------
 
+- Show link to Image Cropping Editor if ``plone.app.imagecropping`` is
+  available.  [maurits]
+
 - Improved compatibility and view on Plone 4.3.  Only 4.3 is really
   supported now, though 4.2 should be fine still.
   [ptillemans, maurits]

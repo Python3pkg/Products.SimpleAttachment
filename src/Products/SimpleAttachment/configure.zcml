@@ -20,6 +20,14 @@
       permission="zope.Public"
       />
 
+  <browser:page
+      for="*"
+      name="attachment_helper"
+      class=".browser.Helper"
+      allowed_attributes="is_cropping_supported"
+      permission="zope.Public"
+      />
+
   <include package=".migration" />
 
   <gs:registerProfile
