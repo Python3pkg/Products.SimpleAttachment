@@ -11,8 +11,8 @@
                 tal:define="voc field/Vocabulary;
                             accessor python:field.getAccessor(here);
                             value python:voc and voc.getValue(str(accessor())) or accessor();
-												    catalog context/@@plone_tools/catalog;
-												    path python: '/'.join(context.getPhysicalPath());
+                            catalog context/@@plone_tools/catalog;
+                            path python: '/'.join(context.getPhysicalPath());
                             images python:catalog(portal_type = ['ImageAttachment'], path=path, sort_on='getObjPositionInParent')">
 
       <tal:block condition="python:(test(not not accessor() and accessor() not in ('0', 'False'), 1, 0)) and images">
@@ -22,8 +22,8 @@
             <tal:related tal:repeat="item images">
               <li tal:define="desc item/Description;
                               item_type item/portal_type;
-															portal context/@@plone_portal_state/portal;
-															putils portal/plone_utils;
+                              portal context/@@plone_portal_state/portal;
+                              putils portal/plone_utils;
                               item_type_class python:'contenttype-' + putils.normalizeString(item_type);
                               item_wf_state item/review_state | python:getInfoFor(item, 'review_state', '');
                               item_wf_state_class python:'state-' + putils.normalizeString(item_wf_state);
@@ -85,10 +85,10 @@
 
       <tal:after_field define="visState python:widget.isVisible(here, mode);
                                visCondition python:field.widget.testCondition(here, portal, template);
-														   catalog context/@@plone_tools/catalog;
-														   path python: '/'.join(context.getPhysicalPath());
-		                           images python:catalog(portal_type = ['ImageAttachment'], path=path, sort_on='getObjPositionInParent');
-														   images python: [i.getObject() for i in images];"
+                               catalog context/@@plone_tools/catalog;
+                               path python: '/'.join(context.getPhysicalPath());
+                               images python:catalog(portal_type = ['ImageAttachment'], path=path, sort_on='getObjPositionInParent');
+                               images python: [i.getObject() for i in images];"
                        condition="python:visState == 'visible' and visCondition">
 
         <dl id="image-controls"
