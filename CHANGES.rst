@@ -1,8 +1,8 @@
 Changelog
 =========
 
-5.0 (unreleased)
-----------------
+5.0.0 (2016-02-24)
+------------------
 
 - Show link to Image Cropping Editor if ``plone.app.imagecropping`` is
   available.  [maurits]
