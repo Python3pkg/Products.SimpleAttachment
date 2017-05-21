@@ -7,7 +7,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.contentmigration.migrator import BaseInlineMigrator
 from Products.contentmigration.walker import CustomQueryWalker
-from StringIO import StringIO
+from io import StringIO
 from transaction import savepoint
 
 
@@ -66,10 +66,10 @@ def migrate_to_blob_storage(portal_setup):
     utool = getToolByName(portal_setup, 'portal_url')
     portal = utool.getPortalObject()
 
-    print >> out, "migrate FileAttachments..."
-    print >> out, migrateSimpleAttachment(portal, FileAttachmentMigrator)
-    print >> out, "migrate ImageAttachments..."
-    print >> out, migrateSimpleAttachment(portal, ImageAttachmentMigrator)
+    print("migrate FileAttachments...", file=out)
+    print(migrateSimpleAttachment(portal, FileAttachmentMigrator), file=out)
+    print("migrate ImageAttachments...", file=out)
+    print(migrateSimpleAttachment(portal, ImageAttachmentMigrator), file=out)
     return out.getvalue()
 
 

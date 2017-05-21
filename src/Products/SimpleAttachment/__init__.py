@@ -5,7 +5,7 @@ from Products.SimpleAttachment.config import DEFAULT_ADD_CONTENT_PERMISSION
 
 from zope.i18nmessageid import MessageFactory
 
-SimpleAttachmentMessageFactory = MessageFactory(u'simpleattachment')
+SimpleAttachmentMessageFactory = MessageFactory('simpleattachment')
 
 DirectoryView.registerDirectory('skins', globals())
 
@@ -13,7 +13,7 @@ DirectoryView.registerDirectory('skins', globals())
 def initialize(context):
 
     # Import the type, which results in registerType() being called
-    from content import FileAttachment, ImageAttachment
+    from .content import FileAttachment, ImageAttachment
     FileAttachment, ImageAttachment     # make pyflakes happy :)
 
     # initialize the content, including types and add permissions

@@ -33,8 +33,8 @@ class FileBlobAttachment(object):
                   default_content_type='application/octet-stream',
                   validators=(('isNonEmptyFile', V_REQUIRED),
                               ('checkFileMaxSize', V_REQUIRED)),
-                  widget=FileWidget(label=_(u'label_file', default=u'File'),
-                                    description=_(u''),
+                  widget=FileWidget(label=_('label_file', default='File'),
+                                    description=_(''),
                                     show_content_type=False,)),
     ]
 
@@ -69,8 +69,8 @@ class ImageBlobAttachment(object):
                 'image/gif', 'image/jpeg', 'image/png'),
             validators=(('isNonEmptyFile', V_REQUIRED),
                         ('checkImageMaxSize', V_REQUIRED)),
-            widget=ImageWidget(label=_(u'label_image', default=u'Image'),
-                               description=_(u''),
+            widget=ImageWidget(label=_('label_image', default='Image'),
+                               description=_(''),
                                show_content_type=False,)),
     ]
 
